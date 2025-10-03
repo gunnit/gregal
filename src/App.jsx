@@ -35,7 +35,7 @@ function App() {
       },
       about: {
         title: 'About Gregal International',
-        description: 'Since 2017, Gregal International has been providing expert consulting services in industrial restructuring and mergers & acquisitions. We help businesses navigate complex transformations with strategic insight and operational excellence.'
+        description: 'Founded in 2017 and led by CEO Mato Maric, Gregal International provides expert consulting services in industrial restructuring and mergers & acquisitions. We help businesses navigate complex transformations with strategic insight and operational excellence, delivering tailored solutions for sustainable growth.'
       },
       contact: {
         title: 'Contact Us',
@@ -75,7 +75,7 @@ function App() {
       },
       about: {
         title: 'Chi è Gregal International',
-        description: 'Dal 2017, Gregal International fornisce servizi di consulenza esperti nella ristrutturazione industriale e nelle fusioni e acquisizioni. Aiutiamo le aziende a navigare trasformazioni complesse con intuizione strategica ed eccellenza operativa.'
+        description: 'Fondata nel 2017 e guidata dal CEO Mato Maric, Gregal International fornisce servizi di consulenza esperti nella ristrutturazione industriale e nelle fusioni e acquisizioni. Aiutiamo le aziende a navigare trasformazioni complesse con intuizione strategica ed eccellenza operativa, fornendo soluzioni su misura per una crescita sostenibile.'
       },
       contact: {
         title: 'Contatti',
