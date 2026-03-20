@@ -151,6 +151,37 @@ function App() {
           }
         ]
       },
+      faq: {
+        tag: 'FAQ',
+        title: 'Frequently Asked Questions',
+        subtitle: 'Common questions about our services and expertise',
+        items: [
+          {
+            q: 'What is Gregal International?',
+            a: 'Gregal International is an industrial restructuring and M&A consulting firm based in Bergamo, Italy. Founded in 2017 by CEO Mato Maric, we provide high-level strategic intervention for industrial enterprises facing critical transitions, including turnaround management, mergers & acquisitions advisory, and operational excellence consulting.'
+          },
+          {
+            q: 'What services does Gregal International offer?',
+            a: 'We offer three core services: Industrial Restructuring (turnaround management, Lean implementation, cost reduction), Mergers & Acquisitions advisory (target identification, due diligence, valuation, deal structuring), and Management Consulting (strategic planning, operational improvement, organizational development).'
+          },
+          {
+            q: 'Who is Mato Maric?',
+            a: 'Mato Maric is the CEO and Founder of Gregal International. He is a turnaround specialist with over 30 years of experience restructuring multi-million euro manufacturing organizations across Europe, USA, Asia, Latin America, and South Africa. He has generated over €50 million in career-wide cost savings and previously held leadership roles at PwC, Continental, and SKF.'
+          },
+          {
+            q: 'What industries does Gregal International serve?',
+            a: 'We primarily serve industrial and manufacturing enterprises facing critical transitions. This includes companies in need of turnaround management, operational restructuring, Lean implementation, and M&A advisory across diverse manufacturing sectors.'
+          },
+          {
+            q: 'Where is Gregal International located?',
+            a: 'Our headquarters are at Via Angelo Maj 16, 24121 Bergamo (BG), Italy — in the heart of Lombardy\'s industrial hub. While based in Italy, we operate internationally across Europe, USA, Asia, Latin America, and South Africa.'
+          },
+          {
+            q: 'How can I contact Gregal International?',
+            a: 'You can reach us by phone at +39 335 475 812, by email at mato.maric@yahoo.com, or through the contact form on our website. We typically respond within 24 hours.'
+          }
+        ]
+      },
       contact: {
         tag: 'Contact Us',
         title: 'Ready to Transform Your Business?',
@@ -246,6 +277,37 @@ function App() {
           }
         ]
       },
+      faq: {
+        tag: 'FAQ',
+        title: 'Domande Frequenti',
+        subtitle: 'Risposte alle domande più comuni sui nostri servizi',
+        items: [
+          {
+            q: 'Cos\'è Gregal International?',
+            a: 'Gregal International è una società di consulenza specializzata in ristrutturazione industriale e M&A con sede a Bergamo, Italia. Fondata nel 2017 dal CEO Mato Maric, forniamo interventi strategici di alto livello per imprese industriali che affrontano transizioni critiche, inclusi gestione del turnaround, consulenza M&A ed eccellenza operativa.'
+          },
+          {
+            q: 'Quali servizi offre Gregal International?',
+            a: 'Offriamo tre servizi principali: Ristrutturazione Industriale (gestione del turnaround, implementazione Lean, riduzione dei costi), Consulenza Fusioni e Acquisizioni (identificazione target, due diligence, valutazione, strutturazione dell\'operazione) e Consulenza Gestionale (pianificazione strategica, miglioramento operativo, sviluppo organizzativo).'
+          },
+          {
+            q: 'Chi è Mato Maric?',
+            a: 'Mato Maric è il CEO e Fondatore di Gregal International. È uno specialista di turnaround con oltre 30 anni di esperienza nella ristrutturazione di organizzazioni manifatturiere multi-milionarie in Europa, USA, Asia, America Latina e Sud Africa. Ha generato oltre 50 milioni di euro di risparmi e ha ricoperto ruoli di leadership presso PwC, Continental e SKF.'
+          },
+          {
+            q: 'Quali settori serve Gregal International?',
+            a: 'Serviamo principalmente imprese industriali e manifatturiere che affrontano transizioni critiche. Questo include aziende che necessitano di gestione del turnaround, ristrutturazione operativa, implementazione Lean e consulenza M&A in diversi settori manifatturieri.'
+          },
+          {
+            q: 'Dove si trova Gregal International?',
+            a: 'La nostra sede è in Via Angelo Maj 16, 24121 Bergamo (BG), Italia — nel cuore del polo industriale lombardo. Pur avendo sede in Italia, operiamo a livello internazionale in Europa, USA, Asia, America Latina e Sud Africa.'
+          },
+          {
+            q: 'Come posso contattare Gregal International?',
+            a: 'Puoi contattarci telefonicamente al +39 335 475 812, via email a mato.maric@yahoo.com o tramite il modulo di contatto sul nostro sito. Di solito rispondiamo entro 24 ore.'
+          }
+        ]
+      },
       contact: {
         tag: 'Contatti',
         title: 'Pronti a Trasformare la Vostra Azienda?',
@@ -264,13 +326,18 @@ function App() {
 
   const closeMenu = () => setMenuOpen(false);
 
+  // Update html lang attribute for SEO
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
+
   return (
     <div className="app">
       {/* Navigation */}
-      <nav className={`nav ${scrolled ? 'scrolled' : ''}`}>
+      <nav className={`nav ${scrolled ? 'scrolled' : ''}`} aria-label="Main navigation">
         <div className="container">
           <div className="nav-content">
-            <img src="/logo-white.png" alt="Gregal International" className="logo-image" />
+            <img src="/logo-white.png" alt="Gregal International — Industrial Restructuring & M&A Consulting" className="logo-image" />
             <button
               className="mobile-menu-btn"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -294,6 +361,7 @@ function App() {
         </div>
       </nav>
 
+      <main>
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-inner">
@@ -353,7 +421,7 @@ function App() {
             </div>
             <div className="about-visual reveal">
               <div className="about-visual-bg">
-                <img src="/mato-headshot.png" alt="Mato Maric - CEO" className="about-headshot" />
+                <img src="/mato-headshot.png" alt="Mato Maric, CEO and Founder of Gregal International, industrial restructuring and M&A specialist based in Bergamo, Italy" className="about-headshot" />
               </div>
               <div className="about-quote">
                 <div className="about-quote-content">
@@ -376,7 +444,7 @@ function App() {
           </div>
           <div className="leadership-content">
             <div className="ceo-image-container reveal">
-              <img src="/ceo-mato-maric.png" alt={t.leadership.ceoName} className="ceo-image" />
+              <img src="/ceo-mato-maric.png" alt={`${t.leadership.ceoName} — ${t.leadership.ceoTitle}, Gregal International`} className="ceo-image" />
             </div>
             <div className="ceo-info reveal">
               <h3 className="ceo-name">{t.leadership.ceoName}</h3>
@@ -423,6 +491,29 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <section id="faq" className="faq">
+        <div className="container">
+          <div className="section-header reveal">
+            <span className="section-tag">{t.faq.tag}</span>
+            <h2 className="section-title">{t.faq.title}</h2>
+            <p className="section-subtitle">{t.faq.subtitle}</p>
+          </div>
+          <div className="faq-grid">
+            {t.faq.items.map((item, index) => (
+              <article key={index} className="faq-item reveal" itemScope itemProp="mainEntity" itemType="https://schema.org/Question">
+                <h3 itemProp="name">{item.q}</h3>
+                <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                  <p itemProp="text">{item.a}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      </main>
 
       {/* Contact Section */}
       <section id="contact" className="contact">
