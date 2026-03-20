@@ -140,14 +140,14 @@ function App() {
           {
             name: 'PugliAI',
             badge: 'Intelligence Partner',
-            description: 'Leader in artificial intelligence for Italian businesses. AI infrastructures, intelligent agents, and strategic consulting.',
-            url: 'https://pugliai.com'
+            description: 'Leader in artificial intelligence for Italian businesses. AI infrastructures, intelligent agents, and strategic consulting for southern Italy.',
+            url: '/partners/pugliai-ai-partner-south-italy/'
           },
           {
             name: 'Niuexa',
             badge: 'Strategy Network',
-            description: 'AI consulting and artificial intelligence solutions specializing in process automation and intelligent agent development.',
-            url: 'https://niuexa.ai'
+            description: 'AI consulting and artificial intelligence solutions specializing in process automation and intelligent agent development for Milan and northern Italy.',
+            url: '/partners/niuexa-ai-partner-milan/'
           }
         ]
       },
@@ -266,14 +266,14 @@ function App() {
           {
             name: 'PugliAI',
             badge: 'Partner Intelligence',
-            description: 'Leader nell\'intelligenza artificiale per le imprese italiane. Infrastrutture AI, agenti intelligenti e consulenza strategica.',
-            url: 'https://pugliai.com'
+            description: 'Leader nell\'intelligenza artificiale per le imprese italiane. Infrastrutture AI, agenti intelligenti e consulenza strategica per il Sud Italia.',
+            url: '/partners/pugliai-ai-partner-south-italy/'
           },
           {
             name: 'Niuexa',
             badge: 'Rete Strategica',
-            description: 'Consulenza AI e soluzioni di intelligenza artificiale specializzate in automazione dei processi e sviluppo di agenti intelligenti.',
-            url: 'https://niuexa.ai'
+            description: 'Consulenza AI e soluzioni di intelligenza artificiale specializzate in automazione dei processi e sviluppo di agenti intelligenti per Milano e il Nord Italia.',
+            url: '/partners/niuexa-ai-partner-milan/'
           }
         ]
       },
@@ -476,15 +476,13 @@ function App() {
               <a
                 key={index}
                 href={partner.url}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="partner-card reveal"
               >
                 <span className="partner-badge">{partner.badge}</span>
                 <h3>{partner.name}</h3>
                 <p>{partner.description}</p>
                 <span className="partner-link">
-                  Visit Website →
+                  {language === 'en' ? 'Learn More' : 'Scopri di Più'} →
                 </span>
               </a>
             ))}

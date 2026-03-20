@@ -10,4 +10,20 @@
     <xhtml:link rel="alternate" hreflang="it" href="https://gregal.it/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://gregal.it/" />
   </url>
+  <url>
+    <loc>https://gregal.it/partners/niuexa-ai-partner-milan/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gregal.it/partners/niuexa-ai-partner-milan/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://gregal.it/partners/niuexa-ai-partner-milan/" />
+  </url>
+  <url>
+    <loc>https://gregal.it/partners/pugliai-ai-partner-south-italy/</loc>
+    <lastmod>2026-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://gregal.it/partners/pugliai-ai-partner-south-italy/" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://gregal.it/partners/pugliai-ai-partner-south-italy/" />
+  </url>
 </urlset>
